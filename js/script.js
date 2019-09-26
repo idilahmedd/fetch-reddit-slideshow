@@ -1,20 +1,3 @@
-// var myList = document.getElementById("content");
-
-// fetch('https://www.reddit.com/search.json?q=kittens')
-//   .then(function(data) {
-//     return data.json();
-//   })
-//   .then(function(json) {
-//     var kittens = json;
-//     kittens.people.forEach(function(kitty) {
-//         var item = document.createElement('content');
-//         item.textContent = kitty.name;
-//         kitty.appendChild(item);
-//     })
-//     //with reditt data.children.forEach
-// });
-
-
 var button;
 var searchTerm;
 var show;
@@ -49,7 +32,6 @@ document.addEventListener('DOMContentLoaded', function(){
         return data.json();
       })
       .then(function(json) {
-        //console.log(json.data.children[1].data.thumbnail);
         var newThumbs = json.data.children.map(function(thumb) {
           return thumb.data.thumbnail;
         });
